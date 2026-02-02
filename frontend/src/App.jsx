@@ -1,8 +1,17 @@
+import { useState } from "react";
+import JoinRoomForm from "./pages/Home/JoinRoomForm";
 
 const App = () => {
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
+  const [joined, setJoined] = useState(false);
   return (
     <div>
-      <h2 className="text-teal-400">Hi</h2>
+      {
+        !joined ? (<JoinRoomForm></JoinRoomForm>) : (
+          <div>Chat Room Component Placeholder</div>
+        )
+      }
     </div>
   );
 };
